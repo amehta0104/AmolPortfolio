@@ -1,0 +1,331 @@
+
+
+
+
+html{
+
+
+margin: 0;
+    
+}
+
+
+.bg-pink{
+
+
+  background-color: #f45b69;
+
+}
+
+.link{
+
+  font-size: 20px;
+}
+
+
+.text-pink{
+
+  color: #f45b69;
+}
+
+body{
+
+  max-width: 100vw;
+    margin: 0;
+    
+    background-color: #333;
+}
+
+.bgblur{
+  /* From https://css.glass */
+background: rgba(209, 209, 209, 0.36);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+}
+
+
+.wrapper{
+
+    
+    max-width: 87vw;
+  
+    margin: 0 auto;
+    
+}
+
+.grid-container{
+
+    display: grid;
+    grid-template-columns: auto auto ;
+   gap:20px;
+    padding: 1.5rem;
+
+    height: auto;
+    margin: 0 auto;
+   
+}
+
+.grid-item{
+
+
+    display: flex;
+    flex-direction: row;
+    background-color: #F9f9f9;
+    
+    padding: 1rem;
+    
+    
+    justify-content: space-between;
+    box-shadow: 1px 3px 5px  #22181c;
+    border-radius: 2%;
+   
+  
+  
+}
+
+h2{
+    text-align: center;
+    color: #06c;
+    font-family:Merengue Script ;
+}
+
+h4{
+
+    font-size: 20px;
+    color: #06c;
+}
+
+.hero{
+
+   object-fit: contain;
+    justify-content: center;
+    
+}
+
+.item-picture{
+
+    width: 70%;
+    height: 100%;
+}
+
+.item-desc{
+
+    margin: 0 auto;
+    padding: 0.5em;
+    background-color: #F9f9f9;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    
+    line-height: 50vh;
+  
+    
+
+}
+
+.col{
+
+  object-fit:fill;
+}
+
+
+
+img{
+   
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    
+    
+}
+
+
+
+.bubble{
+
+  border-radius: 2%;
+}
+
+span{
+   display: inline-block;
+   vertical-align: middle;
+   line-height: 20px;
+   overflow-wrap: break-word;
+}
+
+.item-desc p { 
+    text-align: center;
+    vertical-align: middle;
+}
+
+.item-inline{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.2em;
+    color: #f45b69;
+    
+}
+
+.item-inline div{
+    padding: 0.2rem;
+}
+
+p{
+
+    
+    font-size: 12px;
+    color: #22181c;
+    max-width: 45ch;
+}
+
+.grid-item img{
+
+   width: 100%;
+   height: 100%;
+   
+
+    
+}
+
+
+
+
+.store-grid-container{
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: auto 1fr  auto ;
+    gap: 10px;
+   
+    padding: 10px;
+    height: auto;
+
+
+}
+
+.store-grid-container > div {
+    background-color: #fbfbfd;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    
+  }
+
+  .item1 {
+    grid-area: 1 /  1 / 1 / 5;
+  }
+
+  .item2{
+
+    grid-area: 2/ 1 /   2/    2 ;
+    z-index: 2;
+  }
+
+  .item3{
+
+    grid-area:  2 /  2 / 2 /  3 ;
+  }
+
+  .item4{
+
+    grid-area: 2 / 3 /   2 / 4;
+  }
+
+  .item5{
+
+    grid-area: 2 / 4 / 2 / 5;
+    background-image: url("../images/customcake.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+  }
+
+  .item6{
+
+    grid-area: 4/ 1 / 4 / 5;
+  }
+
+  a{
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+
+  }
+
+  a:link{
+      text-decoration: underline;
+      color: white;
+  }
+
+  a:visited{
+      color: #f6e8ea;
+  }
+
+  .hero-text{
+
+    text-align: center;
+    position: absolute;
+    top: 120%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+    
+    text-decoration: none;
+    padding: 0.5em 0;
+  }
+
+  .custom-nav-text{
+
+    font-family: 'Lobster Two', cursive;
+    font-size:2rem;
+    text-transform: lowercase;
+  }
+  
+
+nav ul{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #f45b69;
+    padding: 2rem;
+    text-decoration: none;
+   text-decoration-style: none;
+}
+
+
+
+.onred{
+
+    color: #f6e8ea;
+}
+
+header{
+
+    box-shadow: 1px 5px 5px #22181c;
+    
+}
+
+
+.cursive-nav{
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3rem;
+
+}
+
+.cursive{
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 70px;
+}
+
+footer{
+
+    text-align: center;
+    padding: 0.2em;
+    background-color: #f45b69;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
