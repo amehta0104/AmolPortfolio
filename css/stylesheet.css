@@ -36,6 +36,7 @@ margin: 0;
 body{
 
   max-width: 100vw;
+  min-height: 100vh;
     margin: 0;
     
     background-color: #333;
@@ -43,8 +44,19 @@ body{
 
 .bgblur{
   /* From https://css.glass */
-background: rgba(34, 34, 34, 0.36);
-border-radius: 10px;
+background: rgba(0, 0, 0, 0.86);
+border-radius: 0px;
+box-shadow: 0 4px 30px rgba(99, 99, 99, 0.1);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+
+}
+
+
+.bgblur3{
+  /* From https://css.glass */
+background: rgba(255, 168, 168, 0.86);
+border-radius: 0px;
 box-shadow: 0 4px 30px rgba(99, 99, 99, 0.1);
 backdrop-filter: blur(6px);
 -webkit-backdrop-filter: blur(6px);
@@ -164,7 +176,7 @@ margin: 0 auto;
 
 .col img{
  object-fit: fill;
- padding: 1em;
+
  margin: 0 auto ;
  
 }
