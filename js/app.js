@@ -1,9 +1,12 @@
-import { Splide } from "@splidejs/splide";
+
 const gallery = document.getElementById('gallery');
 const popup = document.getElementById('popup');
 const selectedImage = document.getElementById('selectedImage');
+ const projectLinks = document.getElementById('project-links').children;
+ const projectList = document.getElementById('selected-content').children;
 
-const imageIndexes = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10, 11, 12, 13, 14];
+
+/*const imageIndexes = [1, 2, 3, 4, 5, 6, 7 , 8, 9 , 10, 11, 12, 13, 14];
 const selectedIndex = null;
 
 imageIndexes.forEach( (i) => {
@@ -24,7 +27,7 @@ selectedImage.alt = 'gg';
 });
 
 console.log(image.src);
-gallery.appendChild(image);
+//gallery.appendChild(image);
 
 });
 
@@ -38,55 +41,78 @@ popup.src = '';
 popup.alt = '';
 
 
-})
+})*/
+ 
+
+ // newLocal.style.transform = 'translateX(-100%)';
+// for each of the children,
+let counter = projectLinks.length
+
+for(let index = 0; index < projectLinks.length; index++) {
+  let link = projectLinks[index];
+  link.classList.add('btn','btn-primary');
+  link.style.cursor= 'pointer' ;
+  
 
 
-var coll = document.getElementsByClassName("collapsible");
-var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
+   
+   let selectedProject = projectList.item([index]);
 
-var splide = new Splide("#main-slider", {
-  width: 600,
-  height: 300,
-  pagination: false,
-  cover: true
-});
+   var newLocal = document.getElementById('display-selected')
 
-var thumbnails = document.getElementsByClassName("thumbnail");
-var current;
+    link.addEventListener('click' , function (event) {
+      selectedProject.style.display = ' block';
+        newLocal.animate ([{transform: 'translateX(0)'},{transform: 'translateX(100%)'}],{
+          // timing options
+         
+  duration:  250,
+transitionTimingFunction:  'ease-in-out',
 
-for (var i = 0; i < thumbnails.length; i++) {
-  initThumbnail(thumbnails[i], i);
-}
 
-function initThumbnail(thumbnail, index) {
-  thumbnail.addEventListener("click", function () {
-    splide.go(index);
-  });
-}
+          
+          
+        } )
+        selectedProject.animate ([{transform: 'translateX(-100%)', },{transform: 'translateX(0)'}],{
+          // timing options
+         
+  duration:  250,
+transitionTimingFunction:  'ease-in-out',
 
-splide.on("mounted move", function () {
-  var thumbnail = thumbnails[splide.index];
 
-  if (thumbnail) {
-    if (current) {
-      current.classList.remove("is-active");
-    }
+          
+          
+        } )
+        setTimeout(function(){ 
+       
+        newLocal.innerHTML = selectedProject.innerHTML ;
 
-    thumbnail.classList.add("is-active");
-    current = thumbnail;
+      
+      
+
+      },250);
+
+      });
+
+ 
+      
+
+     // newLocal.parentElement.parentElement.style.transform = 'translateX(100%)'
+
   }
-});
 
-splide.mount();
+function newFunction() {
+  return ' selectedProject  ';
+}
+
+function getSelectedProject(project) {
+
+  var selectedLocal = project.innerHTML
+  return selectedLocal;
+}
+
+  function slideUp(){
+    //
+  }
+
+

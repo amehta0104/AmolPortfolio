@@ -4,7 +4,7 @@
 
 
 
---bg-dark-main: #000;
+--bg-dark-main: rgb(48, 48, 48);
 --bg-light-main: #fff;
 --accent-color-main: #050a30;
 --dark-blue: #0C2D48;
@@ -275,6 +275,16 @@ padding: 2rem;
  
 }
 
+.hidden{
+  display: none;
+  z-index: 5;
+
+}
+
+.current{
+  display: block;
+}
+
 .bg-3e{
 
   background-color: var(--bg-dark-main);
@@ -539,6 +549,41 @@ align-items: center;
 width: 100%;
 }
 
+.main-grid{
+
+  display: grid;
+grid-template-columns: repeat(8,1fr);
+grid-template-rows: auto auto auto auto auto;
+height: 100vh;
+
+}
+
+.content-header{
+  grid-area: 1/1/2/9;
+  overflow: hidden;
+}
+
+.content-main{
+  grid-area: 2/1/5/7;
+  overflow: hidden;
+ 
+}
+
+#project-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+.content-sidebar {
+  grid-area: 2/7/5/9;
+ 
+}
+
+.content-footer{
+  grid-area: 5/1/6/9;
+}
 
 #bluehero{
 
@@ -711,7 +756,7 @@ margin: 0 auto;
 
 img{
    
-    width: auto;
+    width: 100%;
    
     object-fit: cover;
    
