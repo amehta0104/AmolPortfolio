@@ -59,43 +59,48 @@ for(let index = 0; index < projectLinks.length; index++) {
    
    let selectedProject = projectList.item([index]);
 
+   console.log(selectedProject.innerHTML)
+
    var newLocal = document.getElementById('display-selected')
 
-    link.addEventListener('click' , function (event) {
-      selectedProject.style.display = ' block';
-        newLocal.animate ([{transform: 'translateX(0)'},{transform: 'translateX(100%)'}],{
-          // timing options
-         
-  duration:  250,
-transitionTimingFunction:  'ease-in-out',
+    link.addEventListener('click' ,  ()=> {
+     // selectedProject.style.display = ' block';
+       newLocal.animate([{ opacity : 100 }, { opacity: 0}], {
+         // timing options
+
+        duration: 500,
+        timing: 'ease-in-out',
 
 
-          
-          
-        } )
-        selectedProject.animate ([{transform: 'translateX(-100%)', },{transform: 'translateX(0)'}],{
-          // timing options
-         
-  duration:  250,
-transitionTimingFunction:  'ease-in-out',
 
 
-          
-          
-        } )
-        setTimeout(function(){ 
+       });
        
-        newLocal.innerHTML = selectedProject.innerHTML ;
+        setTimeout(()=>{ 
+       
+        
 
       
       
 
-      },250);
+newLocal.animate(slideUp,slideUpTiming)
+
+      // newLocal.animate([{ opacity : 0 }, { opacity: 100}], {
+      //   // timing options
+
+      //  duration: 500,
+      //  timing:'ease'
+
+
+
+
+      // })
+     return newLocal.innerHTML = selectedProject.innerHTML ;
+    },250);
 
       });
 
- 
-      
+     
 
      // newLocal.parentElement.parentElement.style.transform = 'translateX(100%)'
 
@@ -111,8 +116,48 @@ function getSelectedProject(project) {
   return selectedLocal;
 }
 
-  function slideUp(){
-    //
-  }
+  const slideUp= 
+
+   [
+
+    { opacity: '.5'}, 
+    {transform:'translateY(0) scale(0.98)'},
+
+
+   
+
+
+      { opacity: '1'}, 
+      {transform:'translateY(0) scale(1)'}
+    
+    ]
+    
+    const slideUpTiming = 
+
+     { duration: 500,
+     // timing:'ease'
+    }
+    
+
+      function Project(title, description, year, category) {
+        this.title = title;
+        this.description = description;
+        this.year = year;
+        this.category =category;
+      }
+    // @keyframes chapternav-slidein {
+    //   0% {
+    //    opacity:0
+    //   }
+    //   1% {
+    //    transform:translateX(160px)
+    //   }
+    //   to {
+    //    opacity:1;
+    //    transform:translateX(0)
+    //   }
+    //  }
+    
+  
 
 
